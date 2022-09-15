@@ -6,13 +6,13 @@ cal=("Instalar" "Enable" "Start" "Stop" "InstalarENGIX" "InstalarSSH")
 select i in "${cal[@]}"
         do
         case $i in
-                "Instalar")
-                git clone https://github.com/roxsross/challenge-linux-bash
+                	"Instalar")
+               			git clone https://github.com/roxsross/challenge-linux-bash
 				sudo apt install nodejs -y
 				sudo apt install npm -y 
 				sudo apt install gcc g++ make -y
 				touch /lib/systemd/system/devops@.service
-                ;;
+                		;;
 			"Enable")
 				for port in $(seq 3000 3003); do sudo systemctl enable devops@$port; done
 				;;
